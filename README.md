@@ -1,7 +1,8 @@
 
 # Telegram Folder Uploader Bot
 
-A project to upload folders to a Telegram bot using a Tkinter GUI. Handles large files by splitting them and generates a directory tree for navigation.
+A project to upload folders to a Telegram bot.
+generates a directory tree for navigation.
 
 ## Features
 
@@ -18,14 +19,8 @@ A project to upload folders to a Telegram bot using a Tkinter GUI. Handles large
 
 ## Installation
 
-1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/yourusername/telegram-folder-uploader-bot.git
-   cd telegram-folder-uploader-bot
-   ```
-
-2. Install required libraries:
+Install required libraries:
 
    ```bash
    pip install python-telegram-bot
@@ -58,11 +53,23 @@ A project to upload folders to a Telegram bot using a Tkinter GUI. Handles large
    - Reply to any message with `.` to upload the directory tree.
    - Use `/show` to navigate and download files.
 
-## Files Overview
 
-- `gui.py`: GUI code for folder upload.
-- `upload_to_bot.py`: Handles file uploads and splitting.
-- `bot.py`: Bot commands and interactions.
+## Cloud Deployment
+
+To keep the bot running continuously, it is recommended to deploy the bot to a cloud service. Here are general steps to do this:
+
+1. **Choose a Cloud Provider**: You can use providers like AWS, Heroku, Google Cloud, or any other cloud service that supports running Python applications.
+
+2. **Deploy the Bot**:
+
+   - Upload your project files to the cloud service.
+   - Make sure to configure the environment variables for `TELEGRAM_BOT_TOKEN` and `CHAT_ID`.
+
+3. **Run the Bot**:
+
+   - Start the bot script (`bot.py`) on your cloud service.
+   - Ensure the bot script runs as a background service or using a process manager to keep it alive.
+
 
 ## License
 
