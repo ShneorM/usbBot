@@ -10,7 +10,6 @@ def start_upload():
         messagebox.showerror("Error", "Invalid directory path")
         return
 
-    # יצירת תווית ופס התקדמות
     progress_label = ttk.Label(frame, text="")
     progress_label.grid(row=3, column=0, columnspan=2, pady=5)
 
@@ -18,11 +17,10 @@ def start_upload():
     progress_bar = ttk.Progressbar(frame, variable=progress_var, maximum=100)
     progress_bar.grid(row=4, column=0, columnspan=2, sticky=(tk.W, tk.E), pady=5)
 
-    # התחלת העלאה
+    
     root.update_idletasks()
     asyncio.run(upload_files(directory, progress_var, progress_label, root))
-
-    # איפוס פס ההתקדמות ותווית ההתקדמות
+    
     progress_var.set(0)
     progress_bar.grid_remove()
     progress_label.grid_remove()
@@ -33,7 +31,6 @@ def browse_directory():
         entry.delete(0, tk.END)
         entry.insert(0, directory)
 
-# יצירת ממשק גרפי באמצעות tkinter
 root = tk.Tk()
 root.title("Upload Folder to Telegram Bot")
 
