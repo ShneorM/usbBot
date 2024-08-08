@@ -6,7 +6,6 @@ A project to upload folders to a Telegram bot using a Tkinter GUI. Handles large
 
 - Tkinter GUI for folder selection and upload.
 - Splits large files to comply with Telegram's 50MB limit.
-- Generates a directory tree file.
 - View and download files through the Telegram bot.
 
 ## Prerequisites
